@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import ServiceItemFull from "../components/ServiceItemFull.astro";
+import PageTitle from "../components/PageTitle.astro";
+---
+
+<Layout title="Areas of Practice.">
+    <main>
+        <Nav />
+        <PageTitle title="Areas of Practice" />
+        <section class="bg-gray-50 py-12">
+            <div class="max-w-4xl mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus vitae veniam laboriosam enim accusantium? Deleniti
+                praesentium provident consequuntur neque explicabo nostrum? Aut,
+                sed neque, sapiente cum repellat enim architecto magnam nemo
+                reprehenderit, corrupti optio quas quod a non ab nulla delectus
+                vel! Voluptatibus dolores quidem expedita aut placeat ad
+                quaerat.
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto my-10 flex flex-col space-y-6">
+            <ServiceItemFull
+                title="Card One"
+                content="<p>Molestias quas consectetur pariatur repudiandae neque nihil minima harum rerum sunt dolorum sequi repellat eligendi velit aliquid, voluptate doloribus accusamus voluptatibus incidunt saepe recusandae eos impedit. Tempora vel minima voluptatem at laboriosam, ducimus veniam neque, architecto atque iure temporibus id, dolore repellendus harum nisi quo! Reprehenderit aliquid aliquam praesentium maiores hic, quas temporibus laborum, labore odio ipsum possimus ea vero at nobis illo reiciendis nostrum, nesciunt totam debitis sunt. Ex labore aliquid adipisci voluptatem architecto nostrum in corporis officiis ullam ad.</p><p>Provident, neque sint cumque commodi culpa quae temporibus alias quod omnis. Harum nam ipsam impedit itaque ipsum temporibus eligendi cum sequi dolorem tempore quae voluptatum, numquam aut sunt! Modi?</p>"
+            />
+            <ServiceItemFull
+                title="Card Two"
+                content="<p>Molestias quas consectetur pariatur repudiandae neque nihil minima harum rerum sunt dolorum sequi repellat eligendi velit aliquid, voluptate doloribus accusamus voluptatibus incidunt saepe recusandae eos impedit. Tempora vel minima voluptatem at laboriosam, ducimus veniam neque, architecto atque iure temporibus id, dolore repellendus harum nisi quo! Reprehenderit aliquid aliquam praesentium maiores hic, quas temporibus laborum, labore odio ipsum possimus ea vero at nobis illo reiciendis nostrum, nesciunt totam debitis sunt. Ex labore aliquid adipisci voluptatem architecto nostrum in corporis officiis ullam ad.</p><p>Provident, neque sint cumque commodi culpa quae temporibus alias quod omnis. Harum nam ipsam impedit itaque ipsum temporibus eligendi cum sequi dolorem tempore quae voluptatum, numquam aut sunt! Modi?</p>"
+            />
+            <ServiceItemFull
+                title="Card Three"
+                content="<p>Molestias quas consectetur pariatur repudiandae neque nihil minima harum rerum sunt dolorum sequi repellat eligendi velit aliquid, voluptate doloribus accusamus voluptatibus incidunt saepe recusandae eos impedit. Tempora vel minima voluptatem at laboriosam, ducimus veniam neque, architecto atque iure temporibus id, dolore repellendus harum nisi quo! Reprehenderit aliquid aliquam praesentium maiores hic, quas temporibus laborum, labore odio ipsum possimus ea vero at nobis illo reiciendis nostrum, nesciunt totam debitis sunt. Ex labore aliquid adipisci voluptatem architecto nostrum in corporis officiis ullam ad.</p><p>Provident, neque sint cumque commodi culpa quae temporibus alias quod omnis. Harum nam ipsam impedit itaque ipsum temporibus eligendi cum sequi dolorem tempore quae voluptatum, numquam aut sunt! Modi?</p>"
+            />
+        </section>
+    </main>
+</Layout>

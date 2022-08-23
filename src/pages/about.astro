@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import TimeLine from "../components/TimeLine.astro";
+import PageTitle from "../components/PageTitle.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import PartnerCardSmall from "../components/PartnerCardSmall.astro";
+---
+
+<Layout title="About Us.">
+	<main>
+		<Nav />
+		<PageTitle title="About Us" />
+		<section class="bg-gray-50 py-12">
+			<div class="max-w-4xl mx-auto">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Accusamus vitae veniam laboriosam enim accusantium? Deleniti
+				praesentium provident consequuntur neque explicabo nostrum? Aut,
+				sed neque, sapiente cum repellat enim architecto magnam nemo
+				reprehenderit, corrupti optio quas quod a non ab nulla delectus
+				vel! Voluptatibus dolores quidem expedita aut placeat ad
+				quaerat.
+			</div>
+		</section>
+		<section class="max-w-4xl mx-auto mt-8">
+			<SectionTitle title="Our Partners" />
+			<p class="mb-6 text-gray-400">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+				sint eligendi impedit dolores ab veritatis natus ducimus nam
+				perferendis iure.
+			</p>
+
+			<div class="grid grid-cols-3 gap-2">
+				<PartnerCardSmall
+					name="David Breuer"
+					title="Partner"
+					phone="(123) 456-7890"
+					email="test@example.com"
+					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cumque a possimus eius aperiam commodi, debitis ipsum eaque provident corrupti."
+					linkedin="https://linkedin.com/"
+				/>
+				<PartnerCardSmall
+					name="Jason Herskowitz"
+					title="Partner"
+					phone="(123) 456-7890"
+					email="test@example.com"
+					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cumque a possimus eius aperiam commodi, debitis ipsum eaque provident corrupti."
+					linkedin="https://linkedin.com/"
+				/>
+				<PartnerCardSmall
+					name="Dan Weinberger"
+					title="Partner"
+					phone="(123) 456-7890"
+					email="test@example.com"
+					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cumque a possimus eius aperiam commodi, debitis ipsum eaque provident corrupti."
+					linkedin="https://linkedin.com/"
+				/>
+			</div>
+		</section>
+		<TimeLine />
+	</main>
+</Layout>

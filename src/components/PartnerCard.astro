@@ -1,0 +1,102 @@
+---
+export interface Props {
+    name: string;
+    title: string;
+    phone: string;
+    email: string;
+    content: string;
+    linkedin: string;
+    image: string;
+}
+
+const { name, title, phone, email, content, linkedin, image } =
+    Astro.props as Props;
+---
+
+<div
+    class="bg-gray-50 rounded-sm shadow-md mt-8 flex scroll-my-20 overflow-hidden"
+    id={name.replace(" ", "")}
+>
+    <div class="min-h-max w-1/3">
+        <img src={image} alt="" class="object-cover h-full" />
+    </div>
+
+    <div class="w-2/3 p-4">
+        <div class="text-2xl font-semibold text-gray-700">
+            {name}
+        </div>
+        <div class="text-purple-900 font-semibold mb-2">{title}</div>
+        <div class="text-xs text-purple-900">
+            <div class="mt-2 text-xs">+1 {phone}</div>
+            <!-- <span class="">/</span> -->
+            <div class="mt-2 text-xs">{email}</div>
+        </div>
+        <div class="text-sm text-gray-600 py-4 space-y-4" set:html={content}>
+        </div>
+        <div class="flex gap-2">
+            <a
+                href={"mailto:" + email}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-gray-200 p-1 rounded-sm hover:bg-gray-300 transition duration-200"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-mail"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    stroke="#2c3e50"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M0 0h24v24H0z" stroke="none"></path><rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2"></rect><path d="m3 7 9 6 9-6"></path>
+                </svg>
+            </a>
+            <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-gray-200 p-1 rounded-sm hover:bg-gray-300 transition duration-200"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-linkedin"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    stroke="#2c3e50"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M0 0h24v24H0z" stroke="none"></path><rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="2"></rect><path
+                        d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"
+                    ></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn {
+        overflow: hidden;
+        max-width: 5.5rem;
+        transition: all 0.5s ease-in-out;
+        white-space: nowrap;
+    }
+    .btn:hover {
+        max-width: 20rem;
+        transition: all 0.5s ease-in-out;
+    }
+</style>
