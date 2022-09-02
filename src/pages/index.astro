@@ -10,152 +10,138 @@ import ContactPanel from "../components/ContactPanel.astro";
 ---
 
 <Layout title="Breuer Herskowitz LLP Attorneys at Law.">
-	<main>
-		<section
-			class="flex justify-center items-center flex-col h-screen overflow-hidden"
-		>
-			<video
-				autoplay
-				loop
-				muted
-				class="w-auto min-w-full min-h-full max-h-full absolute object-cover brightness-50"
-			>
-				<source src={cityscape1280} type="video/mp4" />
-				Your browser does not support the video tag.
-			</video>
+    <main>
+        <section class="flex justify-center items-center flex-col h-screen overflow-hidden">
+            <video
+                autoplay
+                loop
+                muted
+                class="w-auto min-w-full min-h-full max-h-full absolute object-cover brightness-50"
+            >
+                <source src={cityscape1280} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
 
-			<h1 class="m-0 text-9xl flex flex-col font-sans font-semibold z-10">
-				<span class="text-gray-300">Breuer</span>
-				<span class="text-orange-600">Herskowitz</span>
-				<span class="text-slate-500">LLP</span>
-				<span class="text-4xl ml-2 text-gray-200"
-					>Attorneys at Law
-				</span>
-			</h1>
-		</section>
+            <h1 class="m-0 text-6xl md:text-9xl flex flex-col font-sans font-semibold z-10">
+                <span class="text-gray-300">Breuer</span>
+                <span class="text-orange-600">Herskowitz</span>
+                <span class="text-slate-500">LLP</span>
+                <span class="text-4xl ml-2 text-gray-200">Attorneys at Law</span>
+            </h1>
+        </section>
 
-		<Nav />
+        <Nav />
 
-		<section class="bg-gray-100">
-			<div class="max-w-4xl mx-auto py-10">
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-					Facilis voluptatibus vero quod aspernatur ut vitae fugit
-					ipsam esse ipsa reiciendis natus, odio vel totam et
-					architecto modi! Natus qui et odio esse, neque placeat
-					facere voluptatibus sapiente iure quae? Corporis nisi ab,
-					assumenda dolore possimus repudiandae dolor veritatis
-					similique qui harum ipsa, nemo sunt. Illo necessitatibus
-					odit ducimus. Nostrum, corrupti voluptate? Quod optio, totam
-					minus est quibusdam excepturi dicta veritatis nihil neque
-					quis! Eos recusandae ex enim in placeat velit aspernatur
-					eaque minus repellendus error perspiciatis amet illo eum,
-					ipsa libero corrupti, praesentium a atque totam nulla
-					architecto. Temporibus optio explicabo maiores earum error
-					incidunt aspernatur. Velit cum unde blanditiis doloribus
-					perferendis atque repellendus! Ipsam officia voluptas
-					dolores minus! Harum ut perspiciatis ullam ducimus deleniti
-					temporibus atque esse, provident corporis quasi eveniet,
-					minus, accusamus similique sequi fugiat ad fuga! Placeat
-					exercitationem optio aperiam quos voluptas eius voluptate,
-					iure animi error nemo nam itaque aut dicta sapiente
-					corrupti. Quas perferendis repudiandae, ad impedit rem
-					placeat minima, beatae officiis facilis pariatur dolore enim
-					eaque deleniti sapiente hic esse sunt deserunt, laboriosam
-					molestiae. Laboriosam ex at, unde voluptate autem nobis
-					culpa possimus enim excepturi rerum voluptates consequatur
-					sunt totam sequi maxime nam eius.
-				</p>
-			</div>
-		</section>
+        <section class="bg-gray-100">
+            <div class="max-w-4xl mx-auto py-10">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis voluptatibus vero quod aspernatur
+                    ut vitae fugit ipsam esse ipsa reiciendis natus, odio vel totam et architecto modi! Natus qui et
+                    odio esse, neque placeat facere voluptatibus sapiente iure quae? Corporis nisi ab, assumenda dolore
+                    possimus repudiandae dolor veritatis similique qui harum ipsa, nemo sunt. Illo necessitatibus odit
+                    ducimus. Nostrum, corrupti voluptate? Quod optio, totam minus est quibusdam excepturi dicta
+                    veritatis nihil neque quis! Eos recusandae ex enim in placeat velit aspernatur eaque minus
+                    repellendus error perspiciatis amet illo eum, ipsa libero corrupti, praesentium a atque totam nulla
+                    architecto. Temporibus optio explicabo maiores earum error incidunt aspernatur. Velit cum unde
+                    blanditiis doloribus perferendis atque repellendus! Ipsam officia voluptas dolores minus! Harum ut
+                    perspiciatis ullam ducimus deleniti temporibus atque esse, provident corporis quasi eveniet, minus,
+                    accusamus similique sequi fugiat ad fuga! Placeat exercitationem optio aperiam quos voluptas eius
+                    voluptate, iure animi error nemo nam itaque aut dicta sapiente corrupti. Quas perferendis
+                    repudiandae, ad impedit rem placeat minima, beatae officiis facilis pariatur dolore enim eaque
+                    deleniti sapiente hic esse sunt deserunt, laboriosam molestiae. Laboriosam ex at, unde voluptate
+                    autem nobis culpa possimus enim excepturi rerum voluptates consequatur sunt totam sequi maxime nam
+                    eius.
+                </p>
+            </div>
+        </section>
 
-		<section class="max-w-4xl mx-auto mt-12">
-			<SectionTitle title="Areas of Practice" />
-			<div class="grid grid-cols-2">
-				<ServiceItem
-					title="Service One"
-					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
-				/>
-				<ServiceItem
-					title="Service Two"
-					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
-				/>
-				<ServiceItem
-					title="Service Three"
-					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
-				/>
-				<ServiceItem
-					title="Service Four"
-					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
-				/>
-				<ServiceItem
-					title="Service Five"
-					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
-				/>
-				<ServiceItem
-					title="Service Six"
-					content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
-				/>
-			</div>
-		</section>
+        <section class="max-w-4xl mx-auto mt-12">
+            <SectionTitle title="Areas of Practice" />
+            <div class="grid grid-cols-2">
+                <ServiceItem
+                    title="Service One"
+                    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
+                />
+                <ServiceItem
+                    title="Service Two"
+                    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
+                />
+                <ServiceItem
+                    title="Service Three"
+                    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
+                />
+                <ServiceItem
+                    title="Service Four"
+                    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
+                />
+                <ServiceItem
+                    title="Service Five"
+                    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
+                />
+                <ServiceItem
+                    title="Service Six"
+                    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo similique illo minus tempora totam numquam recusandae praesentium laudantium! Voluptatibus?"
+                />
+            </div>
+        </section>
 
-		<TimeLine />
+        <TimeLine />
 
-		<section class="bg-gray-50 py-12">
-			<div class="max-w-4xl mx-auto">
-				<SectionTitle title="Contact Us" titleColor="text-gray-800" />
-				<ContactPanel />
-			</div>
-		</section>
-	</main>
+        <section class="bg-gray-50 py-12">
+            <div class="max-w-4xl mx-auto">
+                <SectionTitle title="Contact Us" titleColor="text-gray-800" />
+                <ContactPanel />
+            </div>
+        </section>
+    </main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
+    :root {
+        --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+    }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+    .text-gradient {
+        font-weight: 900;
+        background-image: var(--astro-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 100% 200%;
+        background-position-y: 100%;
+        border-radius: 0.4rem;
+        animation: pulse 4s ease-in-out infinite;
+    }
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+    @keyframes pulse {
+        0%,
+        100% {
+            background-position-y: 0%;
+        }
+        50% {
+            background-position-y: 80%;
+        }
+    }
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
+    .instructions {
+        line-height: 1.6;
+        margin: 1rem 0;
+        background: #4f39fa;
+        padding: 1rem;
+        border-radius: 0.4rem;
+        color: var(--color-bg);
+    }
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
+    .instructions code {
+        font-size: 0.875em;
+        border: 0.1em solid var(--color-border);
+        border-radius: 4px;
+        padding: 0.15em 0.25em;
+    }
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 1rem;
+        padding: 0;
+    }
 </style>
