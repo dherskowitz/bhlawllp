@@ -10,8 +10,11 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/alpinejs": "^0.1.1",
     "@astrojs/image": "^0.3.4",
     "@astrojs/tailwind": "^1.0.0",
+    "@types/alpinejs": "^3.0.0",
+    "alpinejs": "^3.0.0",
     "astro": "^1.0.6",
     "astro-compress": "^1.0.4"
   }

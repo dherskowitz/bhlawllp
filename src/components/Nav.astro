@@ -1,18 +1,32 @@
 ---
 import Link from "../components/NavLink.astro";
+import NavIcon from "../components/NavIcon.astro";
 ---
 
 <nav
-    class="sticky top-0 z-40 flex-none mx-auto w-full bg-slate-900 backdrop-blur-sm border-b dark:border-b-0 -mt-[4.25rem] py-4 flex justify-between"
+    class="fixed md:sticky bottom-0 md:top-0 z-40 flex-none mx-auto w-full bg-slate-900 backdrop-blur-sm md:-mt-[4.25rem] py-4 flex justify-between"
+    x-data="{ open: false }"
 >
-    <span class="text-gray-100 font-semibold text-lg px-4 w-52">
+    <span class="text-gray-100 font-semibold text-lg px-4 w-64">
         <a href="/"><img src="img/logo-inline.jpg" alt="Breuer Herskowitz LLP" /></a>
     </span>
-    <span>
+    <span
+        class="block absolute bottom-20 md:bottom-0 md:static bg-slate-900 backdrop-blur-sm w-full py-2 nav-links text-center"
+        x-show="open"
+    >
         <Link href="/" title="Home" />
         <Link href="/about" title="About Us" />
         <Link href="/practice" title="Areas of Practice" />
         <Link href="/partners" title="Our Partners" />
         <Link href="/contact" title="Contact Us" />
     </span>
+    <NavIcon />
 </nav>
+
+<style>
+    @media only screen and (min-width: 768px) {
+        .nav-links {
+            display: block !important;
+        }
+    }
+</style>
