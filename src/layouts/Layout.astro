@@ -21,7 +21,9 @@ const { title } = Astro.props as Props;
 
         <footer class="bg-slate-800 text-gray-100">
             <div class="max-w-4xl mx-auto divide-y divide-slate-200">
-                <div class="py-12 flex justify-between">
+                <div
+                    class="py-12 flex justify-between flex-col md:flex-row space-y-4 md:space-y-0 text-center items-center md:items-start md:text-left"
+                >
                     <div class="w-56">
                         <img src="img/Logo.jpg" alt="" />
                     </div>

@@ -3,10 +3,10 @@ import TimelineItem from "../components/TimelineItem.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<section class="max-w-4xl mx-auto mt-12">
+<section class="max-w-4xl mx-auto mt-12 px-4 relative overflow-hidden py-8">
     <SectionTitle title="Our Story" />
     <div class="grid gap-6 row-gap-10 md:grid-cols-2">
-        <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+        <div class="md:py-6 md:pr-16 text-gray-300 z-10">
             <TimelineItem
                 title="2010"
                 content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut molestiae quas atque facere iusto doloremque labore modi amet perferendis."
@@ -22,12 +22,10 @@ import SectionTitle from "../components/SectionTitle.astro";
             <div class="flex">
                 <div class="flex flex-col items-center mr-4">
                     <div>
-                        <div
-                            class="flex items-center justify-center w-10 h-10 rounded-full border-blue-600 border-2"
-                        >
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-blue-600 border-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                class="w-6 text-gray-600 dark:text-slate-200"
+                                class="w-6 text-slate-200"
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -37,27 +35,20 @@ import SectionTitle from "../components/SectionTitle.astro";
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 xmlns:dark="http://fake"
-                                ><path
-                                    stroke="none"
-                                    d="M0 0h24v24H0z"
-                                    fill="none"></path>
+                                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M5 12l5 5l10 -10"></path>
                             </svg>
                         </div>
                     </div>
                 </div>
                 <div class="pt-1">
-                    <p
-                        class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300"
-                    >
-                        Lorem, ipsum.
-                    </p>
+                    <p class="mb-2 text-xl font-bold text-slate-300">Lorem, ipsum.</p>
                     <p class="text-gray-700"></p>
                 </div>
             </div>
         </div>
-        <div class="relative">
-            <img src="img/timeline.jpg" alt="" />
+        <div class="absolute md:relative top-0 left-0 w-full brightness-50">
+            <img class="pointer-events-none" src="img/timeline.jpg" alt="" />
         </div>
     </div>
 </section>
