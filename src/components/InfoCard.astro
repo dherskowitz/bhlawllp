@@ -2,12 +2,13 @@
 export interface Props {
     name: string;
     title: string;
+    partner_link: string;
     email: string;
     content: string;
     linkedin: string;
 }
 
-const { name, title, email, content, linkedin } = Astro.props as Props;
+const { name, title, partner_link, email, content, linkedin } = Astro.props as Props;
 ---
 
 <div
@@ -80,7 +81,7 @@ const { name, title, email, content, linkedin } = Astro.props as Props;
             </div>
 
             <a
-                href={"/partners#" + name.replace(" ", "")}
+                href={partner_link}
                 class="text-xs bg-gray-200 py-1 pl-3 px-2 rounded-sm hover:bg-gray-300 flex items-center btn"
             >
                 <span>Learn More</span>

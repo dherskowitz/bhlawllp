@@ -1,0 +1,22 @@
+---
+export interface Props {
+    name: string;
+    position: string;
+    phone: string;
+    email: string;
+}
+
+const { name, position, phone, email } = Astro.props as Props;
+---
+
+<section
+class="relative md:mt-14 py-14  font-semibold text-gray-100 bg-[url('/img/page-title-bg.jpg')] bg-cover bg-center"
+>
+<div class="absolute w-full h-full bg-slate-900 opacity-80 top-0"></div>
+<div class="max-w-4xl mx-auto z-10 relative px-4 md:px-0">
+    <h1 class="text-6xl">{name}</h1>
+    <div class="text-orange-600 font-semibold mb-2 text-2xl">{position}</div>
+    <div>{phone}</div>
+    <div>{email}</div>
+</div>
+</section>

@@ -1,6 +1,8 @@
 ---
-import TimelineItem from "../components/TimelineItem.astro";
+import { Image } from 'astro:assets';
 import SectionTitle from "../components/SectionTitle.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+import timelineImage from '../img/timeline.jpg';
 ---
 
 <section class="max-w-4xl mx-auto mt-12 px-4 relative overflow-hidden py-8">
@@ -8,16 +10,16 @@ import SectionTitle from "../components/SectionTitle.astro";
     <div class="grid gap-6 row-gap-10 md:grid-cols-2">
         <div class="md:py-6 md:pr-16 text-gray-300 z-10">
             <TimelineItem
-                title="2010"
-                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut molestiae quas atque facere iusto doloremque labore modi amet perferendis."
+                title="2011"
+                content="The partnership and founding of Breuer Herskowitz LLP were solidified with Moses David Breuer and Jason Herskowitz coming together. "
             />
             <TimelineItem
-                title="2010"
-                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut molestiae quas atque facere iusto doloremque labore modi amet perferendis."
+                title="2014"
+                content="Dan Weinberger joined the team, enhancing the firm's legal services and client base."
             />
             <TimelineItem
-                title="2010"
-                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut molestiae quas atque facere iusto doloremque labore modi amet perferendis."
+                title="2023"
+                content="The firm expanded further with the addition of Aaron Joel Tyberg and Joseph Pomerantz, demonstrating a sustained commitment to growth and excellence in legal services."
             />
             <div class="flex">
                 <div class="flex flex-col items-center mr-4">
@@ -42,13 +44,13 @@ import SectionTitle from "../components/SectionTitle.astro";
                     </div>
                 </div>
                 <div class="pt-1">
-                    <p class="mb-2 text-xl font-bold text-slate-300">Lorem, ipsum.</p>
+                    <p class="mb-2  font-bold text-slate-300">Breuer Herskowitz LLP is set for future growth and innovation, adapting to the dynamic legal field and maintaining leadership in real estate law and estate planning with exceptional client service.</p>
                     <p class="text-gray-700"></p>
                 </div>
             </div>
         </div>
         <div class="absolute md:relative top-0 left-0 w-full brightness-50 h-full">
-            <img class="pointer-events-none object-cover h-full" src="img/timeline.jpg" alt="" />
+            <Image src={timelineImage} alt="Breuer Herskowitz Timeline Image" class="pointer-events-none object-cover h-full"/>
         </div>
     </div>
 </section>

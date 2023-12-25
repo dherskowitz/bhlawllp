@@ -1,6 +1,8 @@
 ---
-import Link from "../components/NavLink.astro";
+import { Image } from 'astro:assets';
 import NavIcon from "../components/NavIcon.astro";
+import Link from "../components/NavLink.astro";
+import logo from '../img/logo-inline.jpg';
 ---
 
 <nav
@@ -8,7 +10,9 @@ import NavIcon from "../components/NavIcon.astro";
     x-data="{ open: false }"
 >
     <span class="text-gray-100 font-semibold text-lg px-4 w-52">
-        <a href="/"><img src="img/logo-inline.jpg" alt="Breuer Herskowitz LLP" /></a>
+        <a href="/">
+            <Image src={logo} alt="Breuer Herskowitz LLP"/>
+        </a>
     </span>
     <span
         class="block absolute bottom-[4.8rem] md:bottom-0 md:static bg-slate-900 backdrop-blur-sm w-full md:w-auto md:mr-4 py-2 nav-links text-center"
@@ -17,7 +21,7 @@ import NavIcon from "../components/NavIcon.astro";
         <Link href="/" title="Home" />
         <Link href="/about" title="About Us" />
         <Link href="/practice" title="Areas of Practice" />
-        <Link href="/partners" title="Our Partners" />
+        <Link href="/team" title="Our Team" />
         <Link href="/contact" title="Contact Us" />
     </span>
     <NavIcon />

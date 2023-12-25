@@ -1,7 +1,7 @@
 ---
+import ContactPanel from "../components/ContactPanel.astro";
 import Nav from "../components/Nav.astro";
 import PageTitle from "../components/PageTitle.astro";
-import PartnerCardSmall from "../components/PartnerCardSmall.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import TimeLine from "../components/TimeLine.astro";
 import Layout from "../layouts/Layout.astro";
@@ -12,40 +12,21 @@ import Layout from "../layouts/Layout.astro";
         <Nav />
         <PageTitle title="About Us" />
         <section class="bg-gray-50 py-12 px-4">
-            <div class="max-w-4xl mx-auto text-center">
+            <div class="max-w-4xl mx-auto">
                 <p class="px-4">Whether it's buying your own home or selling a property, our team of experienced and knowledgeable real estate attorneys will guide you through the process. Our team has the knowledge, resources, and connections to help you achieve your goals and plan for the future. We guide our clients through the process from beginning to end, addressing any questions and concerns that come up along the way. Across practice areas, we aim to provide creative solutions to help our clients navigate the nuances of complex transactions.</p>
 
                 <p class="p-4">We represent owners, lenders, investors and other stakeholders in a diverse range of activities, servicing the greater New York City area including all its boroughs as well as Long Island and upstate New York.</p>
             </div>
         </section>
-        <section class="max-w-4xl mx-auto mt-8 px-4">
-            <SectionTitle title="Our Partners" />
-            <!-- <p class="mb-6 text-gray-400">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla sint eligendi impedit dolores ab
-                veritatis natus ducimus nam perferendis iure.
-            </p> -->
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                <PartnerCardSmall
-                    name="David Breuer"
-                    title="Partner"
-                    email="david@bhllplaw.com"
-                    linkedin="https://linkedin.com/"
-                />
-                <PartnerCardSmall
-                    name="Jason Herskowitz"
-                    title="Partner"
-                    email="jason@bhllplaw.com"
-                    linkedin="https://linkedin.com/"
-                />
-                <PartnerCardSmall
-                    name="Dan Weinberger"
-                    title="Partner"
-                    email="dan@bhllplaw.com"
-                    linkedin="https://linkedin.com/"
-                />
+        <TimeLine />
+        <section class="max-w-4xl mx-auto my-8 px-4 flex justify-center">
+            <a href="/team/" class="text-4xl font-semibold text-gray-100 border border-gray-200 px-4 py-2 uppercase hover:bg-gray-200 hover:text-gray-900 hover:scale-105 transition duration-150">Meet the team</a>
+        </section>
+        <section class="bg-gray-50 py-12 px-4">
+            <div class="max-w-4xl mx-auto">
+                <SectionTitle title="Contact Us" titleColor="text-gray-800" />
+                <ContactPanel />
             </div>
         </section>
-        <TimeLine />
     </main>
 </Layout>
