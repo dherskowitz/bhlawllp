@@ -3,7 +3,6 @@ import ContactPanel from "../components/ContactPanel.astro";
 import Nav from "../components/Nav.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import ServiceItem from "../components/ServiceItem.astro";
-import TimeLine from "../components/TimeLine.astro";
 import Layout from "../layouts/Layout.astro";
 import cityscape1280 from "/img/cityscape1280.mp4";
 ---
@@ -32,14 +31,14 @@ import cityscape1280 from "/img/cityscape1280.mp4";
         <Nav />
 
         <section class="bg-gray-100">
-            <div class="max-w-4xl mx-auto py-10 text-center">
+            <div class="max-w-4xl mx-auto py-10">
                 <p class="px-4">Whether it's buying your own home or selling a property, our team of experienced and knowledgeable real estate attorneys will guide you through the process. Our team has the knowledge, resources, and connections to help you achieve your goals and plan for the future. We guide our clients through the process from beginning to end, addressing any questions and concerns that come up along the way. Across practice areas, we aim to provide creative solutions to help our clients navigate the nuances of complex transactions.</p>
 
                 <p class="p-4">We represent owners, lenders, investors and other stakeholders in a diverse range of activities, servicing the greater New York City area including all its boroughs as well as Long Island and upstate New York.</p>
             </div>
         </section>
 
-        <section class="max-w-4xl md:mx-auto mt-8 md:mt-12 px-4 m-4 md:m-0">
+        <section class="max-w-4xl md:mx-auto my-8 md:my-12 px-4 m-4 md:m-0">
             <SectionTitle title="Areas of Practice" />
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <ServiceItem
@@ -60,8 +59,6 @@ import cityscape1280 from "/img/cityscape1280.mp4";
                 />
             </div>
         </section>
-
-        <TimeLine />
 
         <section class="bg-gray-50 py-12 px-4">
             <div class="max-w-4xl mx-auto">
