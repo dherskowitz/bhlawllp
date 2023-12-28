@@ -2,29 +2,27 @@
 export interface Props {
     name: string;
     title: string;
-    partner_link: string;
+    staff_link: string;
     email: string;
     content: string;
     linkedin: string;
 }
 
-const { name, title, partner_link, email, content, linkedin } = Astro.props as Props;
+const { name, title, staff_link, email, content, linkedin } = Astro.props as Props;
 ---
 
 <div
     class="bg-gray-50 p-4 rounded-sm shadow-md my-1 flex gap-2 justify-center md:justify-start text-center md:text-left"
 >
     <div>
-        <div class="text-2xl font-semibold text-gray-700">
+        <a href={staff_link}
+            class="text-2xl font-semibold text-gray-700 hover:text-gray-600">
             {name}
-        </div>
+        </a>
         <div class="text-purple-900 font-semibold">{title}</div>
         <div class="text-xs text-purple-900">
             <div class="mb-4 text-xs">{email}</div>
         </div>
-        <!-- <div class="text-sm text-gray-600 py-4">
-            {content}
-        </div> -->
         <div class="flex gap-2">
             <div class="flex gap-2">
                 <a
@@ -80,7 +78,7 @@ const { name, title, partner_link, email, content, linkedin } = Astro.props as P
             </div>
 
             <a
-                href={partner_link}
+                href={staff_link}
                 class="text-xs bg-gray-200 py-1 pl-3 px-2 rounded-sm hover:bg-gray-300 flex items-center btn"
             >
                 <span>Learn More</span>
