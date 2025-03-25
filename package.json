@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.3",
-    "@astrojs/tailwind": "^6.0.1",
     "@tailwindcss/vite": "^4.0.16",
     "@types/alpinejs": "^3.13.5",
     "alpinejs": "^3.12.2",
