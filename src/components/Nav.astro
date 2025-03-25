@@ -1,36 +1,36 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import NavIcon from "../components/NavIcon.astro";
 import Link from "../components/NavLink.astro";
-import logo from '../img/logo-inline.jpg';
+import logo from "../img/logo-inline.jpg";
 ---
 
 <nav
-    class="fixed md:sticky bottom-0 md:top-0 z-40 flex-none mx-auto w-full bg-white backdrop-blur-sm md:-mt-[4.25rem] py-4 flex justify-between"
-    x-data="{ open: false }"
+  class="fixed md:sticky bottom-0 md:top-0 z-40 flex-none mx-auto w-full bg-white backdrop-blur-sm md:-mt-[4.25rem] py-4 flex justify-between"
+  x-data="{ open: false }"
 >
-    <span class="text-gray-100 font-semibold text-lg px-4 w-52">
-        <a href="/">
-            <Image src={logo} alt="Breuer Herskowitz LLP"/>
-        </a>
-    </span>
-    <span
-        class="flex justify-center items-center absolute bottom-[4.8rem] md:bottom-0 md:static bg-slate-900 backdrop-blur-sm w-full md:w-auto md:mr-4 nav-links text-center divide-x divide-slate-200"
-        x-show="open"
-    >
-        <Link href="/" title="Home" />
-        <Link href="/practice" title="Areas of Practice" />
-        <Link href="/team" title="Our Team" />
-        <Link href="/about" title="About Us" />
-        <Link href="/contact" title="Contact Us" />
-    </span>
-    <NavIcon />
+  <span class="text-gray-100 font-semibold text-lg px-4 w-52">
+    <a href="/">
+      <Image src={logo} alt="Breuer Herskowitz LLP" />
+    </a>
+  </span>
+  <span
+    class="flex flex-col md:flex-row justify-center items-center absolute bottom-[4.8rem] md:bottom-0 md:static bg-slate-900 backdrop-blur-sm w-full md:w-auto md:mr-4 nav-links text-center divide-y md:divide-y-0 md:divide-x divide-slate-200"
+    x-show="open"
+  >
+    <Link href="/" title="Home" />
+    <Link href="/practice" title="Areas of Practice" />
+    <Link href="/team" title="Our Team" />
+    <Link href="/about" title="About Us" />
+    <Link href="/contact" title="Contact Us" />
+  </span>
+  <NavIcon />
 </nav>
 
 <style>
-    @media only screen and (min-width: 768px) {
-        .nav-links {
-            display: block !important;
-        }
+  @media only screen and (min-width: 768px) {
+    .nav-links {
+      display: block !important;
     }
+  }
 </style>
