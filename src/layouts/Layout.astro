@@ -1,90 +1,99 @@
 ---
+import "../styles/global.css";
 export interface Props {
-    title: string;
+  title: string;
 }
 const { title } = Astro.props as Props;
-import { Image } from 'astro:assets';
-import logo from '../img/Logo.jpg';
+import { Image } from "astro:assets";
+import logo from "../img/Logo.jpg";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-    </head>
-    <body class="flex flex-col min-h-screen mb-20 md:mb-0">
-        <div class="flex-1">
-            <slot />
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col min-h-screen mb-20 md:mb-0">
+    <div class="flex-1">
+      <slot />
+    </div>
 
-        <footer class="bg-slate-800 text-gray-100">
-            <div class="max-w-4xl mx-auto divide-y divide-slate-200">
-                <div
-                    class="py-12 flex justify-between flex-col md:flex-row space-y-4 md:space-y-0 text-center items-center md:items-start md:text-left"
-                >
-                    <div class="w-56">
-                        <Image src={logo} alt="Breuer Herskowitz Logo"/>
-                    </div>
-                    <div>
-                        <div class="text-lg font-semibold text-slate-400">Phone</div>
-                        <div class="text-xs text-gray-300">+1 718-782-1500</div>
-                    </div>
-                    <div>
-                        <div class="text-lg font-semibold text-slate-400">Email</div>
-                        <div class="text-xs text-gray-300">
-                            <a href="mailto:info@bhllplaw.com">info@bhllplaw.com</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text-lg font-semibold text-slate-400">Our Address</div>
-                        <address class="text-xs text-gray-300">
-                            268 Willoughby Avenue <br />
-                            Brooklyn, NY 11205
-                        </address>
-                    </div>
-                </div>
-                <div class="py-4 text-center text-xs font-light">
-                    Copyright&copy; <span data-copy-year="copy-year"></span> Breuer Herskowitz Law LLP
-                </div>
+    <footer class="bg-slate-800 text-gray-100">
+      <div class="max-w-4xl mx-auto divide-y divide-slate-200">
+        <div
+          class="py-12 flex justify-between flex-col md:flex-row space-y-4 md:space-y-0 text-center items-center md:items-start md:text-left"
+        >
+          <div class="w-56">
+            <Image src={logo} alt="Breuer Herskowitz Logo" />
+          </div>
+          <div>
+            <div class="text-lg font-semibold text-slate-400">Phone</div>
+            <div class="text-xs text-gray-300">+1 718-782-1500</div>
+          </div>
+          <div>
+            <div class="text-lg font-semibold text-slate-400">Email</div>
+            <div class="text-xs text-gray-300">
+              <a href="mailto:info@bhllplaw.com">info@bhllplaw.com</a>
             </div>
-        </footer>
-        <style>
-            :root {
-                --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-                --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-                --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+          </div>
+          <div>
+            <div class="text-lg font-semibold text-slate-400">Our Address</div>
+            <address class="text-xs text-gray-300">
+              268 Willoughby Avenue <br />
+              Brooklyn, NY 11205
+            </address>
+          </div>
+        </div>
+        <div class="py-4 text-center text-xs font-light">
+          Copyright&copy; <span data-copy-year="copy-year"></span> Breuer Herskowitz
+          Law LLP
+        </div>
+      </div>
+    </footer>
+    <style>
+      :root {
+        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+        --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+        --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
-                --color-text: hsl(12, 5%, 4%);
-                --color-bg: hsl(222, 64%, 16%);
-                --color-border: hsl(17, 24%, 90%);
-            }
+        --color-text: hsl(12, 5%, 4%);
+        --color-bg: hsl(222, 64%, 16%);
+        --color-border: hsl(17, 24%, 90%);
+      }
 
-            html {
-                font-family: system-ui, sans-serif;
-                font-size: var(--font-size-base);
-                color: var(--color-text);
-                background-color: var(--color-bg);
-            }
+      html {
+        font-family: system-ui, sans-serif;
+        font-size: var(--font-size-base);
+        color: var(--color-text);
+        background-color: var(--color-bg);
+      }
 
-            body {
-                margin: 0;
-                background-color: var(--color-bg);
-            }
+      body {
+        margin: 0;
+        background-color: var(--color-bg);
+      }
 
-            :global(code) {
-                font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-                    Courier New, monospace;
-            }
-        </style>
+      :global(code) {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
 
-        <script is:inline>
-            const date = new Date();
-            const copyYear = document.querySelector("[data-copy-year]");
-            copyYear.innerText = date.getFullYear();
-        </script>
-    </body>
+    <script is:inline>
+      const date = new Date();
+      const copyYear = document.querySelector("[data-copy-year]");
+      copyYear.innerText = date.getFullYear();
+    </script>
+  </body>
 </html>

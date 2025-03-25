@@ -1,17 +1,19 @@
 ---
 export interface Props {
-    title: string;
-    content: string;
+  title: string;
+  content: string;
 }
 
 const { title, content } = Astro.props as Props;
 ---
 
-<div class="bg-gray-100 p-4 border border-default">
-    <div class="text-lg font-semibold">
-        <p>{title}</p>
-    </div>
-    <div class="text-sm text-gray-500 mt-2">
-        <p>{content}</p>
-    </div>
+<div
+  class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 transition hover:shadow-md my-4"
+>
+  <div class="text-lg font-semibold">
+    <p>{title}</p>
+  </div>
+  <div class="text-sm text-gray-500 mt-2">
+    <p>{content}</p>
+  </div>
 </div>

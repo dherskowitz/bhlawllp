@@ -5,43 +5,45 @@ import PageTitle from "../components/PageTitle.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import ServiceItem from "../components/ServiceItem.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { services } from "../services.js";
 ---
 
 <Layout title="Areas of Practice | Breuer Herskowitz LLP Attorneys at Law">
-    <main>
-        <Nav />
-        <PageTitle title="Areas of Practice" />
-        <section class="bg-gray-50 py-12 px-4 md:px-0">
-            <div class="max-w-4xl mx-auto">
-                At Breuer Herskowitz LLP, we specialize in Residential and Commercial Real Estate, offering expert guidance in real estate transactions, Estate Planning to safeguard assets and plan for the future, and Real Estate Financing, representing both lenders and borrowers in diverse loan transactions.
-            </div>
-        </section>
+  {services}
+  <main>
+    <Nav />
+    <PageTitle title="Areas of Practice" />
+    <section class="bg-gray-50 py-12 px-4 md:px-0">
+      <div class="max-w-4xl mx-auto">
+        At Breuer Herskowitz LLP, we specialize in Residential and Commercial
+        Real Estate, offering expert guidance in real estate transactions,
+        Estate Planning to safeguard assets and plan for the future, and Real
+        Estate Financing, representing both lenders and borrowers in diverse
+        loan transactions.
+      </div>
+    </section>
 
-        <section class="max-w-4xl mx-auto my-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 m-4 md:m-0">
-                <ServiceItem
-                    title="Residential Real Estate"
-                    content="Our experienced team will guide you through your real estate closings, ensuring all contracts are negotiated efficiently and all files close in a seamless and timely manner. We have particular experience including purchases and sales, covering joint ownership arrangements, condominiums, cooperatives and tenancies-in-common and like-kind 1031 exchanges."
-                />
-                <ServiceItem
-                    title="Commercial Real Estate"
-                    content="Our firm handles all aspects of commercial real estate transactions, from letters of intent through closing and post-closing matters. We specialize in smaller family-owned and startup real estate businesses."
-                />
-                <ServiceItem
-                    title="Estate Planning"
-                    content="Let us help you protect your assets, plan for your future, and decide how they should be distributed to your heirs through proper estate planning. Our firm can advise and assist you with setting up trusts and handling other estate planning needs. From how state and federal laws can affect your plans, to advising you on estate planning strategies, our firm can explore what options are available that best fit your goals."
-                />
-                <ServiceItem
-                    title="Real Estate Financing"
-                    content="Breuer Herskowitz specializes in the representation of both lenders and borrowers in various loan transactions. Our attorneys have broad experience handling closings on behalf of lending institutions in New York, working with various parties to ensure smooth and efficient transactions. In addition to representing institutional and lenders, we represent our real estate clients in a wide variety of personal financing transactions."
-                />
-            </div>
-        </section>
-        <section class="bg-gray-50 py-12 px-4">
-            <div class="max-w-4xl mx-auto">
-                <SectionTitle title="Contact Us" titleColor="text-gray-800" />
-                <ContactPanel />
-            </div>
-        </section>
-    </main>
+    <section class="max-w-4xl mx-auto my-12">
+      <div class="m-4 md:m-0 space-y-4">
+        {
+          services &&
+            services.map((service, i) => (
+              <div
+                class="opacity-0 animate-fade-slide-up"
+                style={`animation-delay: ${i * 300}ms; animation-fill-mode: forwards;`}
+              >
+                <ServiceItem title={service.title} content={service.content} />
+              </div>
+            ))
+        }
+      </div>
+    </section>
+    <section class="bg-gray-50 py-12 px-4">
+      <div class="max-w-4xl mx-auto">
+        <SectionTitle title="Contact Us" titleColor="text-gray-800" />
+        <ContactPanel />
+      </div>
+    </section>
+  </main>
 </Layout>
